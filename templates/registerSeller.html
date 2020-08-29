@@ -1,0 +1,18 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block title %}
+{% endblock %}
+{% block body %}
+<div class="container" >
+  <center><h2 class="title">BookStore Owner Registration</h2></center><br/><br/>
+  <form method="POST" action="/registerSeller" style=" width:450px; margin-left: 350px; margin-right:500px;">
+    {{wtf.form_field(form.storeName)}}
+    {{wtf.form_field(form.storeLocation)}}
+    {{wtf.form_field(form.storeOwnerEmail)}}
+    {{wtf.form_field(form.storeOwnerName)}}
+    {{wtf.form_field(form.storeContactNum)}}
+      
+    <input class="btn btn-primary" type="submit" value="Create Account">
+  </form>
+</div>
+{% endblock %}
